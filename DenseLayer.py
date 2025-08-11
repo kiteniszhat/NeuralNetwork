@@ -9,4 +9,4 @@ class DenseLayer:
 
     def forward(self, inputs):
         z = np.dot(inputs, self.weights) + self.biases
-        self.output = self.activation.forward(z)
+        self.output = self.activation.calculate(z)
