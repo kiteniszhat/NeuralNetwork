@@ -42,11 +42,11 @@ class SoftmaxCategoricalCrossEntropy:
     def forward(self, inputs, y_true):
         self.activation.forward(inputs)
         self.output = self.activation.output
-        return self.loss.calculate(self.output, y_true)
+        return self.loss.calculate(y_true, self.output)
 
     def backward(self, gradient, y_true):
         if len(y_true.shape) == 2:
             y_true = np.argmax(y_true, axis=1)
         self.derivative_inputs = gradient.copy()
         self.derivative_inputs[range(len(gradient)), y_true] -= 1
-        self.derivative_inputs = self.dinputs / len(gradient)
+        self.derivative_inputs /= len(gradient)

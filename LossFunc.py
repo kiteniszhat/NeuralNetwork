@@ -9,10 +9,11 @@ class CategoricalCrossEntropy:
         self.y_true = y_true
         self.y_pred = y_pred
         y_pred_clipped = np.clip(y_pred, 1e-10, 1 - 1e-10)
-        print(y_pred)
-        print(y_pred_clipped)
-        loss = -np.sum(y_true * np.log(y_pred_clipped), axis=1)
-        return loss
+        if len(y_true.shape) == 2:
+            loss = np.sum(y_true * y_pred_clipped, axis=1)
+        elif len(y_true.shape) == 1:
+            loss = y_pred_clipped[range(len(y_pred_clipped)), y_true]
+        return -np.log(loss)
 
 
 class MeanSquaredError:
