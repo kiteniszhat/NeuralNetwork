@@ -15,6 +15,8 @@ class CategoricalCrossEntropy:
             loss = y_pred_clipped[range(len(y_pred_clipped)), y_true]
         return -np.log(loss)
 
+    # def backward(self, gradient, y_true):
+
 
 class MeanSquaredError:
     def calculate(self, y_true, y_pred):
