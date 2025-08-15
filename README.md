@@ -1,5 +1,7 @@
 # NeuralNetwork
 
+:construction: *Work in Progress* :warning:
+
 My implementation of a Neural Network from scratch in Python.
 
 ## Table of Contents
