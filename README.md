@@ -16,7 +16,7 @@ My implementation of a Neural Network from scratch in Python.
 
 ## About
 
-This repository contains a basic, from-scratch implementation of a neural network in Python only with NumPy. The goal of this project is to predict MNIST dataset.
+This repository contains a basic, from-scratch implementation of a neural network in Python. The goal of this project is to predict data from MNIST dataset.
 
 ## Features
 
