@@ -5,7 +5,7 @@
 
 Implementation of a deep neural network library in pure Python (with NumPy). 
 
-## 🚀 Features
+## Features
 
 - **Custom Dense Layers**: Fully connected layers interacting via standard matrix operations.
 - **Activation Functions**:
@@ -19,7 +19,7 @@ Implementation of a deep neural network library in pure Python (with NumPy).
     - **Stochastic Gradient Descent (SGD)**: Implements Momentum ($\mu$) and Learning Rate Decay for stable convergence.
 - **Visualization**: Built-in tools to track Loss and Accuracy during training.
 
-## 🧠 Mathematical Core
+## Mathematical Core
 
 This library implements backpropagation manually. For a standard Dense Layer with inputs $X$, weights $W$, and biases $B$:
 
@@ -31,7 +31,7 @@ This library implements backpropagation manually. For a standard Dense Layer wit
     -   Error w.r.t Weights: $\frac{\partial L}{\partial W} = X^T \cdot \frac{\partial L}{\partial Z}$
     -   Error w.r.t Biases: $\frac{\partial L}{\partial B} = \sum \frac{\partial L}{\partial Z}$
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 NeuralNetwork/
@@ -46,7 +46,7 @@ NeuralNetwork/
 └── requirements.txt    # Dependencies (numpy, matplotlib, etc.)
 ```
 
-## 🛠️ Installation
+## Installation
 
 1. **Clone the repository**:
    ```bash
@@ -68,7 +68,7 @@ NeuralNetwork/
    pip install -r requirements.txt
    ```
 
-## ⚡ Quick Start
+## Quick Start
 
 Train a model on the MNIST dataset to recognize handwritten digits:
 
@@ -110,7 +110,7 @@ optimizer.update_params(dense1)
 optimizer.update_params(dense2)
 ```
 
-## 📊 Performance Results
+## Performance Results
 
 ### MNIST Classification
 - **Architecture**: 784 -> 64 (ReLU) -> 10 (Softmax)
@@ -119,6 +119,6 @@ optimizer.update_params(dense2)
 - **Test Loss**: ~0.04
 
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
