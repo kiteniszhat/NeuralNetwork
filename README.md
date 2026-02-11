@@ -9,7 +9,7 @@ Implementation of a deep neural network library in pure Python (with NumPy).
 
 - **Custom Dense Layers**: Fully connected layers interacting via standard matrix operations.
 - **Activation Functions**:
-    - `ReLU`: Rectified Linear Unit for hidden layers ($f(x) = \max(0, x)$).
+    - `ReLU`: Rectified Linear Unit for hidden layers $f(x) = \max(0, x)$.
     - `Softmax`: For output probability distributions.
     - `Sigmoid`: For binary classification tasks.
 - **Loss Functions**:
